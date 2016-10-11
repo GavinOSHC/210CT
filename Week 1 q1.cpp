@@ -4,10 +4,11 @@
 #include <cstdlib>
 using namespace std;
 
-int main(){
+int shuffle(){
     
     //creating the array
     array<int, 8> newArray = {5,3,8,6,1,9,2,7};
+    
     
     //seeding the random numbers
     srand(time(0));
@@ -32,5 +33,11 @@ int main(){
         
     }
     
-    return 0;
+}
+
+int main(){
+    
+    shuffle();
+    
+    return 0; 
 }
