@@ -1,24 +1,14 @@
 pseudocode
 
 HPS(n):
-  root <- sqrt(n)    // Root the number given 
-  
-  floor_n <- int(root)   // Round root to a int 
-  ceil_n <- floor_n + 1  // Create ceil int
-  
-  // Square both integers
-  floor_n_square <- floor_n * floor_n
-  ceil_n_square <- ceil_n * ceil_n
-  
-  // Calcute sqaure closest to the original
-  floor_gap <- n - floor_n_square
-  ceil_gap <- ceil_n_square - n
-  if floor_gap < ceil_gap then
-    print floor_n_squard
-  else 
-    print ceil_n_squard
-  
-  
+  for i <- 1; i is less than n; i++:
+      if i times i is greater than n:
+        n <- i minus 1 times i minus 1
+          break 
+          
+      if i times i is eqaul to n:
+            return i times i 
+    
 Code in C++
 
 #include<iostream>
@@ -28,18 +18,17 @@ using namespace std;
 
 int HPS(int n){
      
-    for(int i = 1; i < n; i++){     // start the loop 
-        if(i*i > n){                // if i is greater then than number,  
-            n = (i-1) * (i-1);     
+    for(int i = 1; i < n; i++){     // start the loop with i untill it equal the square number of n
+        if(i*i > n){            
+            n = (i-1) * (i-1);      // to find the lowest perfect square of n 
             break;
         }
     
-        if (i*i == n)           // if i squard is equal to n return i squard
+        if (i*i == n)           // if i squared is equal to n return i
             return(i*i);
     }
     
     return n;
-    
     
 
 }
