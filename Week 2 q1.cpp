@@ -27,29 +27,21 @@ using namespace std;
 
 
 int HPS(int n){
+     
+    for(int i = 1; i < n; i++){     // start the loop 
+        if(i*i > n){                // if i is greater then than number,  
+            n = (i-1) * (i-1);     
+            break;
+        }
     
-    int root = sqrt(n); 
+        if (i*i == n)           // if i squard is equal to n return i squard
+            return(i*i);
+    }
     
-    int floor_n = int(root);
-    int ceil_n = floor_n + 1;    //Creat a ceil int
-    
-    
-    // square both numbers 
-    int floor_n_sqaure = floor_n * floor_n;
-    int ceil_n_square = ceil_n * ceil_n; 
-    
-    // calculate square closest to the orginal
-    int floor_gap = n - floor_n_sqaure;
-    int ceil_gap = ceil_n_square - n;
-    
-    if (floor_gap < ceil_gap)
-        cout << floor_n_sqaure;
-        
-    else 
-        cout <<  ceil_n_square;
-        
+    return n;
     
     
+
 }
 
 
@@ -58,7 +50,7 @@ int main(){
     int n = 0;
     cout << "Please enter a number: " << endl;
     cin >> n; 
-    HPS(n);
+    cout << HPS(n);
     return 0;
     
 }
