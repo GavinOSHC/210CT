@@ -8,6 +8,9 @@ HPS(n):
           
       if i times i is eqaul to n:
             return i times i 
+            
+  
+  return n 
     
 Code in C++
 
