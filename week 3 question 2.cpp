@@ -1,3 +1,20 @@
+psuedocode
+
+num <- enter number
+div <- num - 1
+
+ISPRIME(num,div):
+    if div equal to 1:
+        return true
+    
+    if num % div equal to 1:
+         return false
+    
+    else:
+        return ISPRIME(num div - 1)
+            
+
+
 code
 
 #include<iostream>
@@ -29,3 +46,8 @@ int main(){
     return 0;
     
 }
+
+
+
+//the  bigO notation for this algorithm is o(n) as the algorithm will only run n number of time until div is equal to 1 
+//or the other if statement are ment. 
