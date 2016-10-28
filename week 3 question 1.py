@@ -1,4 +1,4 @@
-psuedocode 
+#psuedocode 
 
 string <- enter sentance
 string <- string.split()
@@ -13,7 +13,7 @@ STRINGREV(string):
 string <- convert back to string
 
 
-code 
+#code 
 
 def stringRev (word):
     worLen = len(word)          #getting the lenght of the list                         
@@ -31,4 +31,4 @@ print(new)
 
 
 #The bigO notation for this algorithm O(n) as if will only through each element of the list and reverse it.
-#Meaning it will only run n number of times. 
+#Meaning it will only run n number of times.
