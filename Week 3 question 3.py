@@ -1,3 +1,18 @@
+psuedocode 
+
+string <- enter a word
+
+REMOVE_VOWELS(string):
+    if string is empty:
+        return string
+    
+    elif string[0] in "aeiouAEIOU":
+        return REMOVE_VOWELS(string[1:])
+    
+    else:
+        return string[0] + REMOVE_VOWELS(string[1:])
+
+
 code
 
 def remove_vowels(s):
@@ -11,3 +26,9 @@ def remove_vowels(s):
 
 s = "beautiful"
 print(remove_vowels(s))
+
+
+
+
+# The bigO noation for this algorithm if O(n) as the algorithm will only run n number times.
+# As is it will go through the whole string and check if each letter is a vowel and remove it.
