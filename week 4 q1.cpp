@@ -25,10 +25,17 @@ bool binary_search(int arr[], int high, int low, int n) {
 int main() {
 	int n = 6;
 	int arr[25] = { 2,3,5,7,9,13 };
-	int high = 9;
-	int low = 7;
+	int high = 14;
+	int low = 10;
 
-	cout << binary_search(arr, high, low, n);
+	int found = binary_search(arr, high, low, n);
+        
+        if (found == 1){
+            cout << "True";
+        }
+        else if(found == 0){
+            cout << "False";
+        }
 
 	return 0;
 }
