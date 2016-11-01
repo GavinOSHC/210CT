@@ -4,7 +4,7 @@ using namespace std;
 
 bool binary_search(int arr[], int high, int low, int n) {
 	int mid, beg = 0;
-	int end = n + 1; // one position passed the right end
+	int end = n;
 	while (beg < end) {
 		mid = beg + (end - beg) / 2;
 		if ((low > arr[mid]) && (high > arr[mid])) {
@@ -25,8 +25,8 @@ bool binary_search(int arr[], int high, int low, int n) {
 int main() {
 	int n = 6;
 	int arr[25] = { 2,3,5,7,9,13 };
-	int high = 14;
-	int low = 10;
+	int high = 22;
+	int low = 21;
 
 	int found = binary_search(arr, high, low, n);
         
