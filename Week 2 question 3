@@ -4,7 +4,7 @@ MATRIXADD(B,C):
   M <- INPUT matrix order             (1)
   for i <- -1 to M:                   (n)
      for j <- -1 to M:                (n*n)
-        SUM [i,j] <- B[i,j] +C [i,j]  (n*n)     //adding the matrices 
+        SUM [i,j] <- B[i,j] + C[i,j]  (n*n)     //adding the matrices 
    
   Return SUM                          (1)
 
@@ -14,7 +14,7 @@ MATRIXMULTI(B,C):
   M <- INPUT matrix order             (1)
   for i <- -1 to M:                   (n)
      for j <- -1 to M:                (n*n)
-        SUM [i,j] <- B[i,j] *C [i,j]  (n*n)     //multiplying the matrices 
+        SUM [i,j] <- B[i,j] * C[i,j]  (n*n)     //multiplying the matrices 
    
   Return SUM                          (1)
 
@@ -24,7 +24,7 @@ MATRIXSUB(B,C):
   M <- INPUT matrix order             (1)
   for i <- -1 to M:                   (n)
      for j <- -1 to M:                (n*n)
-        SUM [i,j] <- B[i,j] -C [i,j]  (n*n)     //subtracting the matrices  
+        SUM [i,j] <- B[i,j] - C[i,j]  (n*n)     //subtracting the matrices  
    
   Return SUM                          (1)
 
