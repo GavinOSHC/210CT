@@ -2,14 +2,14 @@ psuedocode
 
 string <- enter a word
 
-REMOVE_VOWELS(string):
-    if string is empty:
+REMOVE_VOWELS(string)
+    if string is empty
         return string
     
-    elif string[0] in "aeiouAEIOU":
+    elif string[0] in "aeiouAEIOU"
         return REMOVE_VOWELS(string[1:])
     
-    else:
+    else
         return string[0] + REMOVE_VOWELS(string[1:])
 
 
