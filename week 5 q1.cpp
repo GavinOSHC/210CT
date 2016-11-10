@@ -1,7 +1,3 @@
-#include<iostream>
-#include<math.h>
-using namespace std;
-
 int sub(int arr[]){
     
     int subSeqLength = 1;
@@ -12,26 +8,28 @@ int sub(int arr[]){
     
     
     for(int i = 0; i < r + 1; i++){
-        if(arr[i] == arr[i]){
-            subSeqLength++;
+        if(arr[i] == arr[i]){           //Check if the current value is equal 
+            subSeqLength++;             // if it is increment 
             
-            if(subSeqLength > longest){
+            
+            
+            if(subSeqLength > longest){  //Setting the subSeqLength to a value longest
                 longest = subSeqLength;
-                indexStart = i + 2 - subSeqLength;
+                indexStart = i + 2 - subSeqLength;  // Making sure that the index start is correct
                 indexEnd = i + 2;
                 
             }
         }
         
         else{
-            subSeqLength = 1;
+            subSeqLength = 1;       //if its no longer increasing set the value to 1
             
         }
         
     }
     
-    for(int i = indexStart; i < indexEnd; i++){
-        cout << arr[i];
+    for(int i = indexStart; i < indexEnd; i++){     // printing out the numbers
+        cout << arr[i] << ",";
     }
     
     
