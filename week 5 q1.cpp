@@ -1,14 +1,18 @@
-int sub(int arr[]){
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int sub(int arr[], int sizeArr){
     
     int subSeqLength = 1;
     int longest = 1;
     int indexStart = 0;
     int indexEnd = 0;
-    int r = sizeof(arr) / sizeof (arr[0]); //getting the length of the array
     
     
-    for(int i = 0; i < r + 1; i++){
-        if(arr[i] == arr[i]){           //Check if the current value is equal 
+    
+    for(int i = 0; i < sizeArr + 1; i++){
+        if(arr[i] == arr[i + 1] - 1){           //Check if the current value is equal 
             subSeqLength++;             // if it is increment 
             
             
@@ -40,9 +44,10 @@ int sub(int arr[]){
 
 int main(){
     
-    int arr[] = {1,2,3,4,1,5,1,6,7};
+    int arr[] = {1,3,3,4,1,2,3,4,7};
+    int sizeArr = sizeof(arr) / sizeof (arr[0]); //getting the length of the array
     
-    sub(arr);
+    sub(arr,sizeArr);
 
     return 0;
 }
