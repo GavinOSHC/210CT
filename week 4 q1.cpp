@@ -1,3 +1,31 @@
+//peusdocode
+//
+//
+// BINARY_SEARCH(Array, Array_Size, High, Low):
+//	Mid <- 0
+//	Beg <- 0 
+//	End <- Array_Size
+//	WHILE(Beg < end):
+//		Mid = Beg (End - Beg) / 2
+//		IF(Low greater than Array[Mid] and High greater than Array[Mid]):
+//			Beg <- Mid + 1
+//
+//		ELSE IF (Low less than Array[Mid] and High less than Array[Mid]):
+//		     	End <- Mid 
+//
+//	
+//		ELSE:
+//		    Return True 
+//
+//	Return False
+//
+// INPUT <- Array 
+// HIGH <- high number to be searched 	
+// LOW <- Lowest number to be searched 
+// Array_Size <- Size of Array 
+
+
+
 #include <iostream>
 using namespace std;
 
