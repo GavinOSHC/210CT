@@ -35,7 +35,7 @@ class Graph():
         else:
             self.graph_list[node1] = [node2]
 
-def dfs(v):
+def dfs(g,v):
     s = []
     visited = []
     s.append(v)
@@ -43,10 +43,9 @@ def dfs(v):
         u = s.pop()
         if u not in visited:
             visited.append(u)
+            s.extend([x for x in g[u] if x  not in visited])
     return visited
         
-    
-
 
 
 g = { "a" : ["b"],
@@ -62,7 +61,10 @@ print(graph.node())
 graph.add_edge({"a", "s"})
 print(graph.edges())
 nodes = graph.node()
-print(dfs(nodes))
+print(dfs(g,"a"))
+
+
+
 #http://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
 #http://www.python-course.eu/graphs_python.php
 
