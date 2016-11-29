@@ -35,17 +35,41 @@ class Graph():
         else:
             self.graph_list[node1] = [node2]
 
-def dfs(g,v):
-    s = []
-    visited = []
-    s.append(v)
-    while not len(s) == 0:
-        u = s.pop()
-        if u not in visited:
-            visited.append(u)
-            s.extend([x for x in g[u] if x  not in visited])
-    return visited
-        
+    def dfs(self,v):
+        s = []
+        visited = []
+        s.append(v)
+        while not len(s) == 0:
+            u = s.pop()
+            if u not in visited:
+                visited.append(u)
+                s.extend([x for x in g[u] if x  not in visited])
+
+        file = open("dfs.txt","w")
+        file.write(str(visited))
+        file.close
+        return visited
+
+
+    def bfs(self,v):
+        q = []
+        visited = []
+        q.append(v)
+        while not len(q) == 0:
+            u = q.pop()
+            if u not in visited:
+                visited.append(u)
+                q.extend([x for x in g[u] if x  not in visited])
+    
+        file = open("bfs.txt","w")
+        file.write(str(visited))
+        file.close
+        return visited
+
+
+
+    
+
 
 
 g = { "a" : ["b"],
@@ -60,12 +84,3 @@ graph.add_node("s")
 print(graph.node())
 graph.add_edge({"a", "s"})
 print(graph.edges())
-nodes = graph.node()
-print(dfs(g,"a"))
-
-
-
-#http://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
-#http://www.python-course.eu/graphs_python.php
-
-
