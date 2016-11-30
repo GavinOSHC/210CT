@@ -35,52 +35,54 @@ class Graph():
         else:
             self.graph_list[node1] = [node2]
 
-    def dfs(self,v):
-        s = []
-        visited = []
-        s.append(v)
-        while not len(s) == 0:
-            u = s.pop()
-            if u not in visited:
-                visited.append(u)
-                s.extend([x for x in g[u] if x  not in visited])
+def dfs(graph, start):
+    visited, stack = set(), [start]
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            stack.extend(graph[vertex] - visited)
 
-        file = open("dfs.txt","w")
-        file.write(str(visited))
-        file.close
-        return visited
+            file = open('dfs.txt', 'w')
+            file.write(str(visited))
+            file.close
+            
+    return visited
 
+def bfs(graph, start):
+    visited, queue = set(), [start]
+    while queue:
+        vertex = queue.pop(0)
+        if vertex not in visited:
+            visited.add(vertex)
+            queue.extend(graph[vertex] - visited)
 
-    def bfs(self,v):
-        q = []
-        visited = []
-        q.append(v)
-        while not len(q) == 0:
-            u = q.pop()
-            if u not in visited:
-                visited.append(u)
-                q.extend([x for x in g[u] if x  not in visited])
-    
-        file = open("bfs.txt","w")
-        file.write(str(visited))
-        file.close
-        return visited
+            file = open('bfs.txt', 'w')
+            file.write(str(visited))
+            file.close
+            
+    return visited
 
+        
 
 
-    
-
-
-
-g = { "a" : ["b"],
-      "b" : ["c"],
-      "c" : ["a", "b"]
+g = {'A': set(['B', 'C']),
+     'B': set(['A', 'C']),
+     'C': set(['A']),
+     'E': set(['B','C'])
+     
     }
 
+
+         
 graph = Graph(g)
 print(graph.node())
 print(graph.edges())
-graph.add_node("s")
+graph.add_node('Z')
 print(graph.node())
-graph.add_edge({"a", "s"})
+
+nodes = graph.node()
+print(dfs(g,'A'))
+print(bfs(g,'E'))
+graph.add_edge({'Z', 'A'})
 print(graph.edges())
