@@ -1,0 +1,46 @@
+psuedocode
+
+MATRIXADD(B,C):
+  M <- INPUT matrix order             (1)
+  for i <- to M:                   (n)
+     for j <- to M:                (n*n)
+        SUM [i,j] <- B[i,j] + C[i,j]  (n*n)     //adding the matrices 
+   
+  Return SUM                          (1)
+
+
+
+MATRIXMULTI(B,C):
+  M <- INPUT matrix order             (1)
+  for i <- to M:                   (n)
+     for j <- to M:                (n*n)
+        SUM [i,j] <- 0			  (n*n)     
+  for i <- to M:				(n)
+		for j <- M:				(n*n)
+			for k to M:			(n*n*n)		// selecting row and column
+				SUM[i,j] <- SUM[i,j] + B[i,k] * c[k,j]	(n*n*n) //multiplying the matrices 
+
+  Return SUM                          
+
+
+
+MATRIXSUB(B,C):
+  M <- INPUT matrix order             (1)
+  for i <- to M:                   (n)
+     for j <- to M:                (n*n)
+        SUM [i,j] <- B[i,j] - C[i,j]  (n*n)     //subtracting the matrices  
+   
+  Return SUM  (1)	
+  
+
+R -> B*C + 2*(B + C)
+r1 -> MATRIXADD(B,C)
+r2 -> MATRIxSUB(B,C)
+r3 -> MATRIXMULTI(r2,2)
+r -> r1 + r3
+
+
+
+To find the run-time of this algorithm we need to look at the O noation for each function. 
+FOr the addtion fuction we can see that this is 2n^2+n+2. However this is the same for all the function of this algorithm
+meaning the run-time is O(n^2)

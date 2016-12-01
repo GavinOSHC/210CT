@@ -1,0 +1,13 @@
+#psuedocode 
+
+string <- enter sentance
+string <- string.split()
+
+STRINGREV(string):
+    stringLength <- length(string)
+    if stringLength equal to 1:
+        return string
+    else:
+        return[string[-1]] + STRINGREV(string[:-1])
+    
+string <- convert back to string

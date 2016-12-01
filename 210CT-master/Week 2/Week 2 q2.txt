@@ -1,0 +1,51 @@
+First question from week 1 
+
+
+int shuffle(){
+
+    array<int, 8> newArray = {5,3,8,6,1,9,2,7};   (1)
+    
+    srand(time(0));                               (1)
+     
+    for(int x = 0; x < 8; x++){                   (n)
+         
+        int random = rand() % 8 + 0;              (n)
+              
+        int rep = newArray[x];                    (n)
+        newArray[x] = newArray[random];           (n)
+        newArray[random] = rep;                   (n)
+        
+    }
+    for (int x = 0; x < 8; x++){                  (n)
+        cout << newArray[x];                      (n) 
+        
+    }
+    
+  2+7n = O(n)
+
+
+Second question from week 1
+
+int findZeros(int n){
+
+    int count = 0;                          (1)        
+    
+    if (n < 0){                             (1)
+        cout << "No Factorial for a         (1)
+        number less than 0" << endl;
+    }
+    
+    if (n == 5)                             (1)
+        return 1;                           (1)         
+   
+    while(n > 5){                           (n)
+        n = n/5;                            (n)
+        count = count + n;                  (n)
+        
+    }
+    
+    return count;                           (1)
+}
+
+
+6 + 3n = O(n)
