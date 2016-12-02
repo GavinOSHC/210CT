@@ -42,6 +42,19 @@ int main(){
     int n = 0;
     cout << "Please enter a number: " << endl;
     cin >> n; 
+    
+    if (n < 0){                                     // error checking the number
+        cout << "Error negative number" << endl;
+    }
+    
+    cout << HPS(n);
+    return 0;
+    
+}
+    
+    int n = 0;
+    cout << "Please enter a number: " << endl;
+    cin >> n; 
     cout << HPS(n);
     return 0;
     
