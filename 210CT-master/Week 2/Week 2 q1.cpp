@@ -51,11 +51,4 @@ int main(){
     return 0;
     
 }
-    
-    int n = 0;
-    cout << "Please enter a number: " << endl;
-    cin >> n; 
-    cout << HPS(n);
-    return 0;
-    
-}
+
