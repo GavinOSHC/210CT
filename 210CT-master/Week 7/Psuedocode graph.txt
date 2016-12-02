@@ -1,29 +1,15 @@
-CLASS GRAPH():
+CLASS GRAPH:
 	
-	def init(self,graph):
-		if graph is equal to NONE:
-			graph = {}
-		self.graph = graph
+	g <- {}	initalise the graph
 	
-	def add_node(self, node):
-		if node not in graph:
-			graph.append(node)
+	ADDNODE(node):
+		g.append[node] adding node to the graph
 	
-	def edges(self, edge):
-		edge -> []
+	ADDEDGE(node1, node 2):
+		g[node1].append(node2)
+		g[node2].append(node1)
 		
-		for node in the graph:
-			for the neighbour in graph[node]:
-				if the neighbour node not in edges:
-					edges.append(node,neighbour)
-	
-	def add_edge(self,edge):
-		edge -> new set
-		(node1, edge1) -> tuple(edge)
-		if the node1 is in graph:
-			graph[node1].append(edge1)
-		else:
-			graph[node1] -> [edge1]
+	PRINTING():
+		for each key and value in g:
+			print key nd value pairs
 			
-
-set graph -> {} 
