@@ -13,7 +13,13 @@ class Graph:
           for key,value in self.graph_dic.items():
                print(key ,"|", value)
     
-     def dfs(self,v):        
+     def dfs(self,v):
+          """ DFS on a graph by visiting each vertex
+              finds the first edge fot the vertext given
+              loop through the egdes until the next unvisited vertex
+              marks the vertex as visited and then keeps going
+              until all vertices are in visited.
+          """
           stack = []
           visited = []
           stack.append(v)
@@ -32,6 +38,11 @@ class Graph:
           return visited
 
      def bfs(self,v):
+          """ BFS on a graph by by visiting each edge from
+              the vertex given. Only moves onto the next vertex in the
+              graph once all the edges have been visited.
+              Very similar to DFS but a queue is used instead of stack 
+          """
           queue = []
           visited = []
           queue.insert(0,v)
