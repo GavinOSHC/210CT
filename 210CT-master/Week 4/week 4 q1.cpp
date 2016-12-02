@@ -52,7 +52,7 @@ bool binary_search(int arr[], int high, int low, int n) {
 
 int main() {
 	int n = 6;
-	int arr[25] = { 2,3,5,7,9,13 };
+	int arr[] = { 2,3,5,7,9,13 };
 	int high = 22;
 	int low = 21;
 
