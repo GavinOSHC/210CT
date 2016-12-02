@@ -8,9 +8,9 @@ def stringRev (word):
     
 sentence = "This is Awesome"
 listWord = sentence.split()         #splitting the string into a list
-output = (stringRev(listWord))      #storing the function into a new varible
-new = ' '.join(output)              #converting the list back into a string
-print(new)
+output_of_word = (stringRev(listWord))      #storing the function into a new varible
+new_word = ' '.join(output)              #converting the list back into a string
+print(new_word)
 
 
 #The bigO notation for this algorithm O(n) as if will only through each element of the list and reverse it.
