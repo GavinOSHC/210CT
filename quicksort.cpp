@@ -22,7 +22,7 @@ void quick(int arr[], int left, int right){
 			arr[i] = arr[j];
 			arr[j] = temp;
 			i++;
-			j++;
+			j--;
 		}
 		
 	}
