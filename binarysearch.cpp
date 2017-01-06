@@ -8,10 +8,10 @@ bool binarysearch(int arr[], int size, int key){
   
   while(start < end){
     mid = start + (start + end) / 2;
-    if(key > mid){
+    if(key > arr[mid]){
       start = mid + 1;
     }
-    else if(key < mid){
+    else if(key < arr[mid]){
       end = mid
     }
     else
